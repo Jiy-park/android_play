@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.test_project.databinding.ActivityMainBinding
+import com.sothree.slidinguppanel.PanelState
 import com.sothree.slidinguppanel.SlidingUpPanelLayout
 import render.animations.Attention
 import render.animations.Bounce
@@ -34,6 +35,11 @@ class MainActivity : AppCompatActivity() {
 
         val slidePanel = binding.mainFrame                      // SlidingUpPanel
 
+        binding.tvText1.setOnClickListener {
+            if(binding.mainFrame.panelState == PanelState.COLLAPSED){
+                binding.mainFrame.panelState = PanelState.ANCHORED
+            }
+        }
 
         // 터치로 슬라이드 가능 여부 설정 (panelState 변경으로 여닫는 건 가능)
         binding.btnTouch.setOnClickListener {

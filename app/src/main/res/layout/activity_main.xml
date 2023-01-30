@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:gravity="bottom"
-    app:umanoDragView="@id/slide_layout">
+    app:umanoPanelHeight="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/back_layout"
